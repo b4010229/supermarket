@@ -13,8 +13,8 @@ String contract
 Manager manager 
 TeamLeader teamleader 
 Shift shift
-Task task
-static hasMany=[team:Team] 
+static hasMany=[team:Team, task:Task] 
+static belongsTo=[Team, Task, TeamLeader]
 String toString(){
 	return fullName
 }

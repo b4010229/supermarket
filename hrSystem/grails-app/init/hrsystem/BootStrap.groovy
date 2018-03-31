@@ -5,10 +5,10 @@ class BootStrap {
     def init = { servletContext ->
 
 //managers
-
+/*
 	def manager1=new Manager(
-		fullName: 'Steve Crossbar',
-		userName: 'scross',
+		fullname: 'Steve Crossbar',
+		username: 'scross',
 		password: 'secret2018',
 		managerEmail: 'stevecbar@gmail.com',
 		office: 'B1-900',
@@ -18,8 +18,8 @@ class BootStrap {
 
 
 	def manager2=new Manager(
-		fullName: 'Dan Carling',
-		userName: 'dcarling',
+		fullname: 'Dan Carling',
+		username: 'dcarling',
 		password: 'secret2018',
 		managerEmail: 'dancarling@gmail.com',
 		office: 'B1-901',
@@ -161,6 +161,7 @@ class BootStrap {
 	employee2.addToTeam(team2)
 	task1.addToShift(shift2)
 	task2.addToShift(shift1)
+*/
 
     }
     def destroy = {

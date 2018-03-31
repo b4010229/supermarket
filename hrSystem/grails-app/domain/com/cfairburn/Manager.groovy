@@ -2,21 +2,21 @@ package com.cfairburn
 
 class Manager {
 
-String fullName
-String userName
+String fullname
+String username
 String password
 String managerEmail 
 String office
 String department
 static hasMany=[teamleader:TeamLeader, employee:Employee]
 String toString(){
-	return fullName
+	return fullname
 }
 
     static constraints = {
 
-fullName     blank:false, nullable:false
-userName     blank:false, nullable:false, unique:true
+fullname     blank:false, nullable:false
+username     blank:false, nullable:false, unique:true
 password     blank:false, nullable:false
 managerEmail blank:false, nullable:false, email:true
 office       blank:false, nullable:false
