@@ -10,9 +10,12 @@
 
 </head>
 <body>
+	 <div class="row" align ="center">
+		<asset:image src="banner.png"/>
+	</div>
+	<div id ="container" align="center">
 <div class="first"> 
 		<h3>Team Leader Management</h3>
-<p> Test</p>
 	<button type="button" class="btn btn-success">
 		<g:link controller="TeamLeader" action="create">Register Team Leader</g:link>
 
@@ -21,7 +24,6 @@
 
 <div class="second">
 		<h3> Team Management </h3>
-<p> Test</p>
 	<button type="button" class="btn btn-success">
 		<g:link controller="Team" action="create"> Create Teams </g:link>
 	</button>
@@ -29,7 +31,6 @@
 
 <div class="first"> 
 		<h3>Employee Management</h3>
-<p> Test</p>
 	<button type="button" class="btn btn-success">
 		<g:link controller="Employee" action="create">Register Employees</g:link>
 
@@ -38,7 +39,6 @@
 
 <div class="second">
 		<h3> Shift Management </h3>
-<p> Test</p>
 	<button type="button" class="btn btn-success">
 		<g:link controller="Shift" action="create"> Create Shifts </g:link>
 	</button>
@@ -46,12 +46,17 @@
 
 <div class="first"> 
 		<h3>Employee Management</h3>
-<p> Test</p>
 	<button type="button" class="btn btn-success">
 		<g:link controller="Employee" action="create">Assign Employees to Teams</g:link>
 
 	</button>
 </div>
+</div>
+
+	
+	
+	
+
 
 
 

@@ -10,6 +10,11 @@
 </head>
 
 <body>
+	
+	 <div class="row" align ="center">
+		<asset:image src="banner.png"/>
+	</div>
+	<div id ="container" align="center">
 <div class="first"> 
 		<h3>Task Management</h3>
 	<button type="button" class="btn btn-success">
@@ -21,24 +26,24 @@
 <div class="second">
 		<h3> View Employees</h3>
 	<button type="button" class="btn btn-success">
-		<g:link controller="Employee" action="display"> View Employees </g:link>
+		<g:link controller="Employee" action="index"> View Employees </g:link>
 	</button>
 </div>
 
 <div class="first"> 
 		<h3>View Teams</h3>
 	<button type="button" class="btn btn-success">
-		<g:link controller="Employee" action="display">View Teams</g:link>
+		<g:link controller="Employee" action="index">View Teams</g:link>
 
 	</button>
 </div>
 
 <div class="second">
 		<h3> View Tasks </h3>
-<p> Test</p>
 	<button type="button" class="btn btn-success">
-		<g:link controller="Shift" action="display"> View Tasks </g:link>
+		<g:link controller="Shift" action="index"> View Tasks </g:link>
 	</button>
+</div>
 </div>
 
 

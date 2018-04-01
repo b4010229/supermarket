@@ -8,7 +8,7 @@ def loginToggle={
 
 out <<"<div style='margin: 15px 0 40px;'>"
 
-if (request.getSession(false) && session.user){
+if (request.getSession(false) && session.user && session.job == "manager"){
 
 out << "<span style='float:left; margin-left:15px'>"
 
@@ -22,7 +22,7 @@ out <<"Logout</a></span>"
 
 }
 
-else{
+else if (session.job != "manager" && session.job != "teamleader") {
 
 out <<"<span style='float:right;margin-right:10px'>"
 out <<"<a href='${createLink(controller:'manager', action:'login')}'>"
@@ -36,31 +36,33 @@ out <<"</div><br/>"
 
 def loginToggle2={
 
-out <<"<div style='margin: 15px 0 40px;'>"
+		out <<"<div style='margin: 15px 0 40px;'>"
 
-if (request.getSession(false) && session.user){
+if (request.getSession(false) && session.user && session.job == "teamleader"){
 
-out << "<span style='float:left; margin-left:15px'>"
+		out << "<span style='float:left; margin-right:15px'>"
+		
+		out << "Welcome Team Leader"
 
-out << "Welcome${session.user}."
+		out << "</span><span style='float:right;margin-right:15px'>"
 
-out << "</span><span style='float:right;margin-right:15px'>"
+		out <<"<a href='${createLink(controller:'teamLeader', 		action:'logout')}'>"
 
-out <<"<a href='${createLink(controller:'teamLeader', action:'logout')}'>"
-
-out <<"Logout</a></span>"
-
-}
-
-else{
-
-out <<"<span style='float:right;margin-right:10px'>"
-out <<"<a href='${createLink(controller:'teamLeader', action:'login')}'>"
-out <<"Team Leader Login</a></span>"
+		out <<"Logout</a></span>"
 
 }
+
+	else if (session.job != "manager" && session.job != "teamleader") {
+	
+		out <<"<span style='float:right;margin-right:10px'>"
+
+		out <<"<a href='${createLink(controller:'teamLeader', 		action:'login')}'>"
+		out <<"Team Leader Login</a></span>"
+
+
+	}
 
 out <<"</div><br/>"
 
-}
+}	
 }

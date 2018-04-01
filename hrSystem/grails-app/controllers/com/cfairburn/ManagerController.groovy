@@ -11,8 +11,10 @@ class ManagerController {
 	def user = Manager.findByUsername(params.username)
 
 	if (user && user.password == params.password){
-	session.user = user
+	session["job"] = "manager"
 
+	session.user = user
+	
 	render view:'home'
 }
 
@@ -26,6 +28,7 @@ class ManagerController {
 
 		def logout = {
 	session.user = null
+	session.job = null
 	redirect(uri:'/')
 }
 }
