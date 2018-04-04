@@ -51,6 +51,13 @@
 
 	</button>
 </div>
+<div class="second">
+		<h3> Employee Search </h3>
+	<button type="button" class="btn btn-success">
+		<g:link controller="employee" action="advSearch"> Search for Employees </g:link>
+	</button>
+</div>
+
 </div>
 
 	

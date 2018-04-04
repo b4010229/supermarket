@@ -3,7 +3,7 @@ package com.cfairburn
 class Task {
 
 String taskName
-int numberOfPeople
+String numberOfPeople
 String sectionName
 String department
 String timeRequired

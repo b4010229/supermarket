@@ -14,7 +14,8 @@ Manager manager
 TeamLeader teamleader 
 Shift shift
 static hasMany=[team:Team, task:Task] 
-static belongsTo=[Team, Task, TeamLeader]
+static belongsTo=[Team, Task, TeamLeader, Manager]
+
 String toString(){
 	return fullName
 }

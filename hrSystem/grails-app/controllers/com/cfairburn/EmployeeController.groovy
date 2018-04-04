@@ -4,7 +4,7 @@ class EmployeeController {
 
     def scaffold = Employee
 
-/*def advSearch(){
+def advSearch(){
 }
 def advResults(){
 
@@ -24,5 +24,5 @@ params.each {field, value ->
 }
 }
 return [ employees:employees ]
-}*/
+}
 }

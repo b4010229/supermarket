@@ -3,6 +3,30 @@ package com.cfairburn
 class ManagerController {
 
     def scaffold = Manager
+		
+
+	def advSearch(){
+	}
+
+	def advResults(){
+	
+	def employeeProps = Employee.metaClass.properties*.fullName
+
+	def employees = Employee.withCriteria {
+	"${params.queryType}"{
+	params.each {field, value->
+
+		if(employeeProps.grep(field)&&value){
+		ilike(field, value)
+		}
+	}
+	}
+}
+
+	return [employees:employees]
+}
+
+
 	def login(){
 
 	}
