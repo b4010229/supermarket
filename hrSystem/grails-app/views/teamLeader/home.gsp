@@ -44,6 +44,12 @@
 		<g:link controller="Shift" action="index"> View Tasks </g:link>
 	</button>
 </div>
+<div class="first">
+		<h3> Task Search </h3>
+	<button type="button" class="btn btn-success">
+		<g:link controller="task" action="advSearch"> Search for Tasks </g:link>
+	</button>
+</div>
 </div>
 
 
